@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,495 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="drinkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Cfg-M7-gRX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="D4y-nZ-dNw"/>
+                                    <constraint firstAttribute="height" constant="75" id="fkW-Bb-adS"/>
+                                </constraints>
+                            </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wNW-sx-jsr">
+                                <rect key="frame" x="20" y="171" width="374" height="278"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jF8-dE-21i">
+                                        <rect key="frame" x="6" y="6" width="362" height="266"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7v-MA-ZcB">
+                                <rect key="frame" x="20" y="457" width="374" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="冰塊：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxn-Le-ECh">
+                                <rect key="frame" x="20" y="493" width="55" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-C3-yYl">
+                                <rect key="frame" x="83" y="493" width="311" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="去冰"/>
+                                    <segment title="微冰"/>
+                                    <segment title="少冰"/>
+                                    <segment title="正常冰"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NgG-LS-GRR">
+                                <rect key="frame" x="83" y="532" width="311" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="無糖"/>
+                                    <segment title="微糖"/>
+                                    <segment title="少糖"/>
+                                    <segment title="正常甜"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="甜度：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZ5-p9-qq2">
+                                <rect key="frame" x="20" y="532" width="55" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="白玉珍珠：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sh-1j-cf0">
+                                <rect key="frame" x="20" y="571" width="80" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0W-tN-T3O">
+                                <rect key="frame" x="108" y="571" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="bubbleSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="bm5-Ju-Ue2"/>
+                                </connections>
+                            </switch>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="百香蒟蒻：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoI-IN-4zn">
+                                <rect key="frame" x="20" y="610" width="80" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7DH-RQ-wDD">
+                                <rect key="frame" x="108" y="610" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="konjacSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="CP5-rj-ph5"/>
+                                </connections>
+                            </switch>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="杯數：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikd-hc-cBy">
+                                <rect key="frame" x="180" y="571" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="小計：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yo3-Fv-OP5">
+                                <rect key="frame" x="180" y="610" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94L-AH-lmJ">
+                                <rect key="frame" x="218" y="610" width="104" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="杯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2J-yj-ZMs">
+                                <rect key="frame" x="271" y="572" width="24" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="i4Q-5d-1fI">
+                                <rect key="frame" x="298" y="571" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepperChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="bIU-ey-GBB"/>
+                                </connections>
+                            </stepper>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRv-bm-0BF">
+                                <rect key="frame" x="227" y="572" width="45" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmZ-1g-HNo">
+                                <rect key="frame" x="329" y="611" width="65" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Add in 🛒">
+                                    <color key="titleColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BLj-mV-YXR"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCi-7R-4I4">
+                                <rect key="frame" x="323" y="826" width="69" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKP-el-2v7"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="總計：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNK-wi-6u5">
+                                <rect key="frame" x="21" y="826" width="64" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgf-im-wII">
+                                <rect key="frame" x="88" y="826" width="143" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXc-Zu-Lrb">
+                                <rect key="frame" x="253" y="825" width="52" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kg4-6U-dnk"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sJc-jX-1dL">
+                                <rect key="frame" x="20" y="649" width="374" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="季節限定" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzC-5a-Zzj">
+                                <rect key="frame" x="340" y="457" width="52" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="13"/>
+                                <color key="textColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coverpage" translatesAutoresizingMaskIntoConstraints="NO" id="hhC-Qt-A1v">
+                                <rect key="frame" x="20" y="171" width="374" height="686"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zAS-Tj-Jx6">
+                                <rect key="frame" x="0.0" y="119" width="414" height="29"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJr-N3-awF">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="MENU">
+                                            <color key="titleColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ha-Xz-9bp"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDL-VK-6na">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="熟成紅茶">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XzU-aX-2zd"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Th3-FC-J46"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJk-De-KAp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="麗春紅茶">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="slS-ef-UTq"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vml-h1-bE2"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxk-uu-Rhx">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="太妃紅茶">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink3Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qTq-aV-ybw"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URb-16-D6U"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUs-fH-gVw">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="胭脂紅茶">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink4Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xgH-ul-8M8"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caV-cb-ndl"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHK-Wd-aGr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="雪藏紅茶">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink5Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ew-QS-rWd"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Da1-7g-2DQ"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZN-vW-aRN">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="春芽綠茶">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9DD-Q8-GIg"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YkD-fd-pPY"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.85000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgZ-jf-WOa">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="春梅冰茶">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink7Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M7g-J5-Jvc"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ulp-0X-t5j"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nku-rU-9sG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="熟成冷露">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink8Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6KN-Ef-OqL"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Lv-7Y-The"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54j-YR-x4c">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="雪花冷露">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink9Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lej-Q4-C0V"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NkL-hC-jvr"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJZ-41-sbi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="春芽冷露">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvL-no-geo"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pTx-1i-XXo"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kl-wP-Skp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="冷露歐蕾">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink11Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rK7-YT-21j"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ds1-wZ-wdJ"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1Q-eQ-m7D">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="熟成歐蕾">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink12Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YCc-lR-y8w"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zoc-EQ-bLu"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWX-Dx-osK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="白玉歐蕾">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink13Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hQ-tA-E6h"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Rh-uX-QfW"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0y-Km-sgh">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="熟成檸果">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="drink14:" destination="BYZ-38-t0r" eventType="touchUpInside" id="khG-zI-qqc"/>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="REK-Mb-plw"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uH1-5C-7jm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="胭脂多多">
+                                            <color key="titleColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofM-ks-6JX"/>
+                                            <action selector="specialDrink1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j5s-JI-Csq"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDB-1q-oXg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="派森末茶">
+                                            <color key="titleColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axn-2x-O9a"/>
+                                            <action selector="specialDrink2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caq-en-tal"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZj-y6-ImD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" red="0.0015077140420000001" green="0.1834258735" blue="0.246016711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="17"/>
+                                        <state key="normal" title="露比末茶">
+                                            <color key="titleColor" red="0.73713946340000003" green="0.58268016580000004" blue="0.3610644341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="optionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BpM-q3-WT9"/>
+                                            <action selector="specialDrink3Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="up4-pI-X7w"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.24200335140000001" blue="0.32127457860000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zAS-Tj-Jx6" firstAttribute="top" secondItem="Cfg-M7-gRX" secondAttribute="bottom" id="0cr-mG-Dsb"/>
+                            <constraint firstItem="Cfg-M7-gRX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4lb-rx-7Ns"/>
+                            <constraint firstItem="Cfg-M7-gRX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Avd-pG-Xu3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zAS-Tj-Jx6" secondAttribute="trailing" id="L0H-jP-QUm"/>
+                            <constraint firstItem="Cfg-M7-gRX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="O3s-mk-oyK"/>
+                            <constraint firstItem="zAS-Tj-Jx6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xxc-uT-pvG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addInCartButton" destination="vmZ-1g-HNo" id="Vgn-vG-e0A"/>
+                        <outlet property="bubbleLabel" destination="4Sh-1j-cf0" id="uzd-6Y-FUL"/>
+                        <outlet property="bubbleSwitch" destination="H0W-tN-T3O" id="ZpX-kq-nVX"/>
+                        <outlet property="clearButton" destination="iXc-Zu-Lrb" id="viW-y1-Gah"/>
+                        <outlet property="coverpageImageView" destination="hhC-Qt-A1v" id="5zJ-5Q-tcW"/>
+                        <outlet property="cupLabel" destination="G2J-yj-ZMs" id="Zbv-gw-OvX"/>
+                        <outlet property="cupTitleLabel" destination="Ikd-hc-cBy" id="pQy-3I-s1V"/>
+                        <outlet property="drinksImageView" destination="jF8-dE-21i" id="RyT-zm-fIN"/>
+                        <outlet property="drinksView" destination="wNW-sx-jsr" id="GxJ-HQ-q7G"/>
+                        <outlet property="iceLabel" destination="wxn-Le-ECh" id="63O-7R-PNL"/>
+                        <outlet property="iceSegmentedControl" destination="9kn-C3-yYl" id="5rs-Yy-EB8"/>
+                        <outlet property="introduceLabel" destination="b7v-MA-ZcB" id="yQu-jc-jxQ"/>
+                        <outlet property="konjacLabel" destination="SoI-IN-4zn" id="D9O-pj-t3O"/>
+                        <outlet property="konjacSwitch" destination="7DH-RQ-wDD" id="Xqi-VX-HtS"/>
+                        <outlet property="orderTextView" destination="sJc-jX-1dL" id="GUd-95-o84"/>
+                        <outlet property="quantityLabel" destination="xRv-bm-0BF" id="LmP-gZ-eS4"/>
+                        <outlet property="quantityStepper" destination="i4Q-5d-1fI" id="yRh-Fq-4Yy"/>
+                        <outlet property="specialDrinkLabel" destination="pzC-5a-Zzj" id="Jj4-Fq-OKr"/>
+                        <outlet property="subTotalTitleLabel" destination="Yo3-Fv-OP5" id="XHk-Dk-jhe"/>
+                        <outlet property="submitButtonN" destination="rCi-7R-4I4" id="sSn-kH-HG7"/>
+                        <outlet property="subtotalPriceLabel" destination="94L-AH-lmJ" id="Pya-Kz-3do"/>
+                        <outlet property="sugarLabel" destination="uZ5-p9-qq2" id="BNN-gL-itQ"/>
+                        <outlet property="sugarSegmentedControl" destination="NgG-LS-GRR" id="Dnz-f7-uMg"/>
+                        <outlet property="titleLabel" destination="YJr-N3-awF" id="3TM-Ri-p1t"/>
+                        <outlet property="totalPriceLabel" destination="Vgf-im-wII" id="ZQE-SG-MpR"/>
+                        <outlet property="totalTitleLabel" destination="yNK-wi-6u5" id="gfl-nZ-1NC"/>
+                        <outletCollection property="options" destination="MDL-VK-6na" collectionClass="NSMutableArray" id="g0D-y0-Dih"/>
+                        <outletCollection property="options" destination="UJk-De-KAp" collectionClass="NSMutableArray" id="9t2-69-0Yo"/>
+                        <outletCollection property="options" destination="Nxk-uu-Rhx" collectionClass="NSMutableArray" id="Wxk-kl-idX"/>
+                        <outletCollection property="options" destination="qUs-fH-gVw" collectionClass="NSMutableArray" id="QHh-Rf-Sn7"/>
+                        <outletCollection property="options" destination="GHK-Wd-aGr" collectionClass="NSMutableArray" id="u5P-m4-T3a"/>
+                        <outletCollection property="options" destination="hZN-vW-aRN" collectionClass="NSMutableArray" id="oHK-lo-QzL"/>
+                        <outletCollection property="options" destination="nku-rU-9sG" collectionClass="NSMutableArray" id="ozv-8X-pim"/>
+                        <outletCollection property="options" destination="54j-YR-x4c" collectionClass="NSMutableArray" id="cah-xO-yJ6"/>
+                        <outletCollection property="options" destination="EJZ-41-sbi" collectionClass="NSMutableArray" id="dKq-wi-t9z"/>
+                        <outletCollection property="options" destination="9Kl-wP-Skp" collectionClass="NSMutableArray" id="Vvw-90-dq9"/>
+                        <outletCollection property="options" destination="T1Q-eQ-m7D" collectionClass="NSMutableArray" id="DS7-iO-QY7"/>
+                        <outletCollection property="options" destination="lWX-Dx-osK" collectionClass="NSMutableArray" id="6VC-fc-sv4"/>
+                        <outletCollection property="options" destination="Z0y-Km-sgh" collectionClass="NSMutableArray" id="rgY-Tb-ZBv"/>
+                        <outletCollection property="options" destination="uH1-5C-7jm" collectionClass="NSMutableArray" id="7LR-gR-2du"/>
+                        <outletCollection property="options" destination="VDB-1q-oXg" collectionClass="NSMutableArray" id="awD-H2-wb6"/>
+                        <outletCollection property="options" destination="bZj-y6-ImD" collectionClass="NSMutableArray" id="muL-x3-kos"/>
+                        <outletCollection property="options" destination="VgZ-jf-WOa" collectionClass="NSMutableArray" id="sG9-uQ-dgp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coverpage" width="602" height="1144"/>
+        <image name="logo" width="1114" height="776"/>
+    </resources>
 </document>
